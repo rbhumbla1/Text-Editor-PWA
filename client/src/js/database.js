@@ -29,7 +29,7 @@ export const putDb = async (content) => {
 
   // Get confirmation of the request.
   const result = await request;
-  console.log('🚀 - data saved to the database', result);
+  console.log('🚀 - data saved to the database', result, content);
 };
 
 // getDB gets all the content from the database
