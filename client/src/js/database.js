@@ -1,14 +1,14 @@
 import { openDB } from 'idb';
 
 const initdb = async () =>
-  openDB('jateRB', 1, {
+  openDB('jate', 1, {
     upgrade(db) {
-      if (db.objectStoreNames.contains('jateRB')) {
-        console.log('jateRB database already exists');
+      if (db.objectStoreNames.contains('jate')) {
+        console.log('jate database already exists');
         return;
       }
-      db.createObjectStore('jateRB', { keyPath: 'id', autoIncrement: true });
-      console.log('jateRB database created');
+      db.createObjectStore('jate', { keyPath: 'id', autoIncrement: true });
+      console.log('jate database created');
     },
   });
 
@@ -16,13 +16,13 @@ const initdb = async () =>
 export const putDb = async (content) => {
 
   // Create a connection to the database database and version we want to use.
-  const contactDb = await openDB('jateRB', 1);
+  const contactDb = await openDB('jate', 1);
 
   // Create a new transaction and specify the database and data privileges.
-  const tx = contactDb.transaction('jateRB', 'readwrite');
+  const tx = contactDb.transaction('jate', 'readwrite');
 
   // Open up the desired object store.
-  const store = tx.objectStore('jateRB');
+  const store = tx.objectStore('jate');
 
   // Use the .add() method on the store and pass in the content.
   const request = store.add({ content });
@@ -37,13 +37,13 @@ export const getDb = async () => {
   console.log('GET from the database');
 
   // Create a connection to the database database and version we want to use.
-  const contactDb = await openDB('jateRB', 1);
+  const contactDb = await openDB('jate', 1);
 
   // Create a new transaction and specify the database and data privileges.
-  const tx = contactDb.transaction('jateRB', 'readonly');
+  const tx = contactDb.transaction('jate', 'readonly');
 
   // Open up the desired object store.
-  const store = tx.objectStore('jateRB');
+  const store = tx.objectStore('jate');
 
   // Use the .getAll() method to get all data in the database.
   const request = store.getAll();
