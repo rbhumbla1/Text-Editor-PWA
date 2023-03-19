@@ -48,11 +48,11 @@ export const getDb = async () => {
   // Use the .getAll() method to get all data in the database.
   const request = store.getAll();
 
-  //console.log('request.value', request);
+  console.log('request.value', request);
 
   // Get confirmation of the request.
   const result = await request;
-  //console.log('result.value', result);
+  console.log('result.value', result);
   if(result.length > 0)
     return result[result.length -1].content;
   else 

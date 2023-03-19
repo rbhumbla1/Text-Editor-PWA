@@ -35,7 +35,12 @@ export default class {
       
       console.info('Loaded data from IndexedDB, injecting into editor')
 
-      this.editor.setValue(data || localData || header);
+      if(data.length == 0 && localData === null)
+      this.editor.setValue(header);
+      else if(data.length > 0 && localData != null)
+      this.editor.setValue(data);
+      else 
+      this.editor.setValue(localData);
     });
 
     
