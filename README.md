@@ -40,19 +40,19 @@ The application has following features:
 
 The following animation demonstrates the application functionality on app installed on Heroku:
 
-![Demonstration of Text Editor](./Assets/00-demo.gif)
+[Demonstration of Text Editor](./Assets/demo-text-editor.mp4) or [demo on google Drive](https://drive.google.com/file/d/1ErImjJbkGNJrCv_g3YOi0S4E67qHicIE/view?usp=share_link)
 
 The following image shows the application's `manifest.json` file:
 
-![Manifest file in the browser.](./Assets/01-manifest.png)
+![Manifest file in the browser.](./Assets/manifest.png)
 
 The following image shows the application's registered service worker:
 
-![Registered service worker in the browser.](./Assets/02-service-worker.png)
+![Registered service worker in the browser.](./Assets/service-worker.png)
 
 The following image shows the application's IndexedDB storage:
 
-![IndexedDB storage named 'jate' in the browser.](./Assets/03-idb-storage.png)
+![IndexedDB storage named 'jate' in the browser.](./Assets/idb-storage.png)
 
 ## Usage
 1. You can access the file in GitHub repository: https://github.com/rbhumbla1/Text-Editor-PWA
